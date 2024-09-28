@@ -73,62 +73,42 @@ models:
         description: Discount applied to the order
         data_type: float
 
-#   - name: PRODUCT
-#     description: Order product table
-#     config:
-#       tags:
-#         - product
-#     columns:
-#       - name: ID
-#         description: Product identifier
-#         tests:
-#           - not_null
-#         data_type: VARCHAR(16777216)
-#       - name: PRODUCTNAME
-#         description: Name of the product
-#         tests:
-#           - not_null
-#         data_type: VARCHAR(16777216)
-#       - name: SUPPLIERID
-#         description: Supplier identifier
-#         tests:
-#           - not_null
-#         data_type: VARCHAR(16777216)
-#       - name: CATEGORYID
-#         description: Category identifier
-#         tests:
-#           - not_null
-#         data_type: VARCHAR(16777216)
-#       - name: QUANTITYPERUNIT
-#         description: Quantity per unit of the product
-#         tests:
-#           - not_null
-#         data_type: VARCHAR(16777216)
-#       - name: UNITPRICE
-#         description: Current unit price of the product
-#         tests:
-#           - not_null
-#         data_type: VARCHAR(16777216)
-#       - name: UNITSINSTOCK
-#         description: Units currently in stock
-#         tests:
-#           - not_null
-#         data_type: VARCHAR(16777216)
-#       - name: UNITSONORDER
-#         description: Units on order
-#         tests:
-#           - not_null
-#         data_type: VARCHAR(16777216)
-#       - name: REORDERLEVEL
-#         description: Reorder level for the product
-#         tests:
-#           - not_null
-#         data_type: VARCHAR(16777216)
-#       - name: DISCONTINUED
-#         description: Whether the product is discontinued
-#         tests:
-#           - not_null
-#         data_type: VARCHAR(16777216)
+  - name: PRODUCT
+    description: Order product table
+    config:
+      tags:
+        - product
+    columns:
+      - name: ID
+        description: Product identifier
+        data_type: integer
+      - name: PRODUCTNAME
+        description: Name of the product
+        data_type: string
+      - name: SUPPLIERID
+        description: Supplier identifier
+        data_type: integer
+      - name: CATEGORYID
+        description: Category identifier
+        data_type: integer
+      - name: QUANTITYPERUNIT
+        description: Quantity per unit of the product
+        data_type: string
+      - name: UNITPRICE
+        description: Current unit price of the product
+        data_type: float
+      - name: UNITSINSTOCK
+        description: Units currently in stock
+        data_type: integer
+      - name: UNITSONORDER
+        description: Units on order
+        data_type: integer
+      - name: REORDERLEVEL
+        description: Reorder level for the product
+        data_type: integer
+      - name: DISCONTINUED
+        description: Whether the product is discontinued
+        data_type: integer
 
 #   - name: CATEGORY
 #     description: Product category table
