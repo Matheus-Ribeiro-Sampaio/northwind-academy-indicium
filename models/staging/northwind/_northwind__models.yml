@@ -1,0 +1,295 @@
+version: 1
+
+models:
+  - name: _ORDER_
+    description: Order table
+    config:
+      tags:
+        - order
+        - location
+    columns:
+      - name: ID
+        description: Order identifier
+        data_type: integer
+      - name: CUSTOMERID
+        description: Customer identifier
+        data_type: string
+      - name: EMPLOYEEID
+        description: Employee identifier
+        data_type: integer
+      - name: ORDERDATE
+        description: Order date
+        data_type: date
+      - name: REQUIREDDATE
+        description: Required delivery date
+        data_type: date
+      - name: SHIPPEDDATE
+        description: Shipped date
+        data_type: date
+      - name: SHIPVIA
+        description: Shipping method identifier
+        data_type: integer
+      - name: FREIGHT
+        description: Freight charges
+        data_type: float
+      - name: SHIPNAME
+        description: Name of the recipient
+        data_type: string
+      - name: SHIPADDRESS
+        description: Shipping address
+        data_type: string
+      - name: SHIPCITY
+        description: City of the recipient
+        data_type: string
+      - name: SHIPREGION
+        description: Region of the recipient
+        data_type: string
+      - name: SHIPPOSTALCODE
+        description: Postal code of the recipient
+        data_type: string
+      - name: SHIPCOUNTRY
+        description: Country of the recipient
+        data_type: string
+
+#   - name: ORDERDETAIL
+#     description: Order details table
+#     config:
+#       tags:
+#         - order
+#     columns:
+#       - name: ORDERID
+#         description: Order identifier
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: PRODUCTID
+#         description: Product identifier
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: UNITPRICE
+#         description: Unit price of the product
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: QUANTITY
+#         description: Quantity of the product ordered
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: DISCOUNT
+#         description: Discount applied to the order
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+
+#   - name: PRODUCT
+#     description: Order product table
+#     config:
+#       tags:
+#         - product
+#     columns:
+#       - name: ID
+#         description: Product identifier
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: PRODUCTNAME
+#         description: Name of the product
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: SUPPLIERID
+#         description: Supplier identifier
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: CATEGORYID
+#         description: Category identifier
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: QUANTITYPERUNIT
+#         description: Quantity per unit of the product
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: UNITPRICE
+#         description: Current unit price of the product
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: UNITSINSTOCK
+#         description: Units currently in stock
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: UNITSONORDER
+#         description: Units on order
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: REORDERLEVEL
+#         description: Reorder level for the product
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: DISCONTINUED
+#         description: Whether the product is discontinued
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+
+#   - name: CATEGORY
+#     description: Product category table
+#     config:
+#       tags:
+#         - product
+#     columns:
+#       - name: ID
+#         description: Category identifier
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: CATEGORYNAME
+#         description: Name of the product category
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: DESCRIPTION
+#         description: Description of the product category
+#         data_type: VARCHAR(16777216)
+
+#   - name: EMPLOYEE
+#     description: Employee table
+#     config:
+#       tags:
+#         - employee
+#         - location
+#     columns:
+#       - name: ID
+#         description: Employee identifier
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: LASTNAME
+#         description: Employee's last name
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: FIRSTNAME
+#         description: Employee's first name
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: TITLE
+#         description: Employee's title
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: TITLEOFCOURTESY
+#         description: Employee's courtesy title (e.g., Mr., Mrs., Dr.)
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: BIRTHDATE
+#         description: Employee's birth date
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: HIREDATE
+#         description: Employee's hire date
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: ADDRESS
+#         description: Employee's address
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: CITY
+#         description: Employee's city
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: REGION
+#         description: Employee's region
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: POSTALCODE
+#         description: Employee's postal code
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: COUNTRY
+#         description: Employee's country
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: HOMEPHONE
+#         description: Employee's home phone number
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: EXTENSION
+#         description: Employee's phone extension
+#         data_type: VARCHAR(16777216)
+#       - name: PHOTO
+#         description: Employee's photo
+#         data_type: VARCHAR(16777216)
+#       - name: NOTES
+#         description: Notes about the employee
+#         data_type: VARCHAR(16777216)
+#       - name: REPORTSTO
+#         description: Manager or supervisor identifier
+#         data_type: VARCHAR(16777216)
+#       - name: PHOTOPATH
+#         description: Path to the employee's photo
+#         data_type: VARCHAR(16777216)
+
+#   - name: CUSTOMER
+#     description: Customer table
+#     config:
+#       tags:
+#         - customer
+#     columns:
+#       - name: ID
+#         description: Customer identifier
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: COMPANYNAME
+#         description: Name of the customer's company
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: CONTACTNAME
+#         description: Name of the contact person
+#         tests:
+#           - not_null
+#         data_type: VARCHAR(16777216)
+#       - name: CONTACTTITLE
+#         description: Title of the contact person
+#         data_type: VARCHAR(16777216)
+#       - name: ADDRESS
+#         description: Customer's address
+#         data_type: VARCHAR(16777216)
+#       - name: CITY
+#         description: Customer's city
+#         data_type: VARCHAR(16777216)
+#       - name: REGION
+#         description: Customer's region
+#         data_type: VARCHAR(16777216)
+#       - name: POSTALCODE
+#         description: Customer's postal code
+#         data_type: VARCHAR(16777216)
+#       - name: COUNTRY
+#         description: Customer's country
+#         data_type: VARCHAR(16777216)
+#       - name: PHONE
+#         description: Customer's phone number
+#         data_type: VARCHAR(16777216)
+#       - name: FAX
+#         description: Customer's fax number
+#         data_type: VARCHAR(16777216)
